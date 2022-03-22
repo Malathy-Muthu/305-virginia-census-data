@@ -74,7 +74,7 @@ def display_results(selected_value):
                                     zmin=valmin,
                                     zmax=valmax,
                                     marker_line_width=0))
-    fig.update_layout(height=800,width=1000,mapbox_style="open-street-map",
+    fig.update_layout(height=600,width=1000,mapbox_style="open-street-map",
                       mapbox_zoom=5.2,
                       mapbox_center = {"lat": 31, "lon": -100})
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
