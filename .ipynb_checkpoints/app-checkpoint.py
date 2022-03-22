@@ -34,7 +34,7 @@ app.title=tabtitle
 ########### Layout
 
 app.layout = html.Div(children=[
-    html.H1('Texas Census Data 2017',style={'font-family':'verdana','background-color': 'blue','color': 'white', 'fontSize': 40, 'textAlign': 'center','text-decoration': 'underline'}),
+    html.H1('Texas Census Data 2017',style={'font-family':'verdana','background-color': 'dark blue','color': 'white', 'fontSize': 40, 'textAlign': 'center','text-decoration': 'underline'}),
     # Dropdowns
     html.Div(children=[
         # left side
@@ -74,8 +74,8 @@ def display_results(selected_value):
                                     zmin=valmin,
                                     zmax=valmax,
                                     marker_line_width=0))
-    fig.update_layout(mapbox_style="open-street-map",
-                      mapbox_zoom=4.3,
+    fig.update_layout(height=1000,width=2000,mapbox_style="open-street-map",
+                      mapbox_zoom=5.2,
                       mapbox_center = {"lat": 31, "lon": -100})
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
