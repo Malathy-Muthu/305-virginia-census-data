@@ -34,12 +34,12 @@ app.title=tabtitle
 ########### Layout
 
 app.layout = html.Div(children=[
-    html.H1('Texas Census Data 2017'),
+    html.H1('Texas Census Data 2017',style={'font-family':'verdana','background-color': 'blue','color': 'white', 'fontSize': 40, 'textAlign': 'center','text-decoration': 'underline'}),
     # Dropdowns
     html.Div(children=[
         # left side
         html.Div([
-                html.H6('Select census variable:'),
+                html.H6('Select census variable:',style={'font-family':'verdana','color': 'dark red', 'fontSize': 25, 'textAlign': 'center'}),
                 dcc.Dropdown(
                     id='stats-drop',
                     options=[{'label': i, 'value': i} for i in varlist],
