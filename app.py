@@ -34,12 +34,12 @@ app.title=tabtitle
 ########### Layout
 
 app.layout = html.Div(children=[
-    html.H1('Texas Census Data 2017',style={'font-family':'verdana','background-color': 'blue','color': 'white', 'fontSize': 20, 'textAlign': 'center','text-decoration': 'underline'}),
+    html.H1('Texas Census Data 2017',style={'font-family':'verdana','background-color': '#00008B','color': 'white', 'fontSize': 40, 'textAlign': 'center','text-decoration': 'underline'}),
     # Dropdowns
     html.Div(children=[
         # left side
         html.Div([
-                html.H6('Select census variable:',style={'font-family':'verdana','color': 'red', 'fontSize': 15, 'textAlign': 'center'}),
+                html.H6('Select census variable:',style={'font-family':'verdana','color': '#E41B17', 'fontSize': 25, 'textAlign': 'center'}),
                 dcc.Dropdown(
                     id='stats-drop',
                     options=[{'label': i, 'value': i} for i in varlist],
@@ -74,7 +74,7 @@ def display_results(selected_value):
                                     zmin=valmin,
                                     zmax=valmax,
                                     marker_line_width=0))
-    fig.update_layout(height=650,width=1000,mapbox_style="open-street-map",
+    fig.update_layout(height=700,width=1000,mapbox_style="open-street-map",
                       mapbox_zoom=5.2,
                       mapbox_center = {"lat": 31, "lon": -100})
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
