@@ -69,14 +69,14 @@ def display_results(selected_value):
     fig = go.Figure(go.Choroplethmapbox(geojson=counties,
                                     locations=df['FIPS'],
                                     z=df[selected_value],
-                                    colorscale='blues',
+                                    colorscale='greens',
                                     text=df['County'],
                                     zmin=valmin,
                                     zmax=valmax,
                                     marker_line_width=0))
-    fig.update_layout(mapbox_style="carto-positron",
-                      mapbox_zoom=5.8,
-                      mapbox_center = {"lat": 38.0293, "lon": -79.4428})
+    fig.update_layout(mapbox_style="open-street-map",
+                      mapbox_zoom=4.3,
+                      mapbox_center = {"lat": 31, "lon": -100})
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
 # https://community.plot.ly/t/what-colorscales-are-available-in-plotly-and-which-are-the-default/2079
