@@ -69,7 +69,7 @@ def display_results(selected_value):
     fig = go.Figure(go.Choroplethmapbox(geojson=counties,
                                     locations=df['FIPS'],
                                     z=df[selected_value],
-                                    colorscale='green',
+                                    colorscale='blues',
                                     text=df['County'],
                                     zmin=valmin,
                                     zmax=valmax,
